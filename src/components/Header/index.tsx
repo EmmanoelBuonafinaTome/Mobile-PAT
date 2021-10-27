@@ -3,14 +3,22 @@ import { View, Text, Image } from 'react-native';
 
 import { styles } from './styles';
 
-export function Header() {
+type Props = {
+  textHeader: string;
+};
+
+export function Header({ textHeader }: Props) {
   return (
     <View style={styles.container}>
-      <Image style={styles.teste} resizeMode='contain' source={require('../../assets/logo.png')} />
-      <Image style={styles.aaa} resizeMode='contain'  source={require('../../assets/prefeitura.png')} />
-      <Text style={styles.ccc}>
-        PAT Mobile
-      </Text>
+      <View style={styles.imgContainer}>
+        <Image style={styles.fistImage} resizeMode='contain' source={require('../../assets/logo.png')} />
+        <Image style={styles.secondaryImage} resizeMode='contain'  source={require('../../assets/prefeitura.png')} />
+      </View>
+      <View style={styles.containerText}>
+        <Text style={styles.textHeader}>
+          {textHeader}
+        </Text>
+      </View>
     </View>
   )
 }

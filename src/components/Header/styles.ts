@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
-import { COLORS } from '../../theme/colors';
+import { COLORS, FONTS } from '../../theme/';
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,19 +9,28 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: COLORS.DARK_BLUE,
+    backgroundColor: COLORS.GRAY,
     width: '100%',
     borderBottomWidth: 3,
     borderBottomColor: COLORS.ORANGE
   },
-  teste: {
+  imgContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
+  fistImage: {
     height: 75,
   },
-  aaa: {
+  secondaryImage: {
     height: 50,
-    width: '35%'
+    width: '50%'
   },
-  ccc: {
-    textAlign: 'center'
+  containerText: {
+    width: "100%"
+  },
+  textHeader: {
+    fontSize: 16,
+    fontFamily: FONTS.BOLD
   }
 })
